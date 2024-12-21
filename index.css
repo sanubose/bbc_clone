@@ -1,0 +1,141 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+#cards {
+    display: flex;
+
+
+
+    margin: 12px;
+    height: auto;
+
+
+}
+
+.card {
+
+    width: 300px;
+    height: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 22px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.card img {
+    margin-top: 15px;
+    width: 250px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+.minline,
+.timeloc {
+    margin-top: 15px;
+
+
+
+}
+
+.card>p,
+h3 {
+    font-size: 20px;
+    padding-top: 15px;
+    margin-bottom: 15px;
+
+}
+
+.timeloc>span {
+    color: gray;
+    padding: 5px;
+    font-size: small;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.line {
+    border: 1px solid;
+}
+
+.minline {
+    box-shadow: 0px 0px 0px 0.1px rgb(17, 15, 15);
+
+}
+
+.outline {
+    border: 0.2px solid rgb(143, 138, 138);
+    box-shadow: 0px 0px 0px 0.1px rgb(17, 15, 15);
+    margin: 20px 0px 30px 0px;
+
+
+}
+
+
+
+
+.slider-container {
+    background-color: rgb(20, 22, 24);
+    overflow: hidden;
+    position: relative;
+    padding: 25px;
+    margin-top: 15px;
+}
+
+.card-wrapper {
+    display: flex;
+    transition: transform 0.4s ease-out;
+}
+
+.card1 {
+    width: 250px;
+    margin: 40px 25px 50px 25px;
+
+    box-shadow: 0 4px 6px rgba(9, 8, 8, 0.2);
+    border-radius: 8px;
+    padding: 2px 2px 15px 10px;
+    border-radius: 12px;
+    color: rgb(215, 212, 206);
+}
+
+.arrow {
+    position: absolute;
+
+
+    transform: translateY(-50%);
+    font-size: 60px;
+    color: #f4eded;
+
+
+    padding: 5px 10px;
+    cursor: pointer;
+    user-select: none;
+    z-index: 10;
+}
+
+.arrow.left {
+    left: 400px;
+    bottom: -45px;
+    ;
+
+
+}
+
+.arrow.right {
+    right: 400px;
+    bottom: -45px;
+    
+
+
+}
+
+.slideline {
+
+    width: 100%;
+    border: 0.2px solid rgb(218, 244, 246);
+    margin-top: 42px;
+}
