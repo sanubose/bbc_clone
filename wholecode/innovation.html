@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <title>Innovation</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+		
+		
+		
+		/*header*/
+		#header{
+            position: sticky;
+            top: 0px;
+            z-index: 1;
+            background-color: white;
+        }
+        #upper{
+            border: 1px solid rgb(230, 227, 227);
+            height: 60px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo{
+            background-color: black;
+            height:33px;
+            width: 33px;
+            font-size: 25px;
+            font-family: sans-serif;
+            font-weight:bold;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            margin: 15px 5px;
+        }
+        .logo p{
+            color: aliceblue;
+            margin: 5px;
+            font-size: 25px;
+        }
+        #logo{
+            display: flex;
+            justify-content: center;
+        }
+        #left {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+        #left a{
+            padding: 20px;
+            font-size: larger;
+            color: black;
+        }
+        #right button{
+            border: 0cap;
+            height: 40px;
+            width: 100px;
+            font-family: "Arial",sans-serif;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        #reg{
+            background-color: black;
+            color: aliceblue;
+        }
+        #sign{
+            background-color: white;
+        }
+        #lower{
+            display: flex;
+            justify-content: center;
+            border: 1px solid rgb(216, 216, 216);
+            margin:0;
+    
+        }
+        #lower a{
+            text-decoration: none;
+            color: black;
+            font-family: sans-serif;
+            font-weight:bold;
+            padding: 0 7px;
+            margin: 10px 0;
+        }
+		
+		
+		@media (max-width: 768px) {
+    /* Adjust upper section */
+    #upper {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+    }
+
+    #left {
+        order: 2;
+        justify-content: center;
+    }
+
+    #left a {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    #logo {
+        order: 1;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    .logo {
+        margin: 5px;
+        height: 30px;
+        width: 30px;
+    }
+
+    .logo p {
+        font-size: 20px;
+    }
+
+    #right {
+        order: 3;
+        margin: 10px;
+        display: flex;
+        gap: 10px;
+    }
+
+    #right button {
+        width: 90px;
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    /* Adjust lower section */
+    #lower {
+        flex-wrap: wrap;
+        padding: 10px 0;
+        justify-content: center;
+    }
+
+    #lower a {
+        margin: 5px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for smaller devices */
+    #upper {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    #left a {
+        padding: 5px;
+        font-size: 14px;
+    }
+
+    #logo {
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        height: 25px;
+        width: 25px;
+    }
+
+    .logo p {
+        font-size: 16px;
+    }
+
+    #right button {
+        width: 80px;
+        font-size: 10px;
+    }
+
+    #lower a {
+        margin: 3px;
+        font-size: 12px;
+    }
+}
+
+       /*end head */
+
+        /* Section 1 Styles */
+        .containerA {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            border-bottom: 2px solid #000;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            font-weight: bold;
+            margin: 0;
+            padding: 10px 0;
+        }
+
+        .top-section {
+            display: grid;
+            grid-template-columns: 2fr 3fr 2fr;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .left-content, .right-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .left-content h2 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .left-content p, .right-content p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .left-content span, .right-content span {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .main-image img, .right-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .bottom-section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+            border-radius: 8px;
+        }
+
+        .card h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 15px;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        .card span {
+            font-size: 13px;
+            color: #888;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .top-section {
+                grid-template-columns: 1fr;
+            }
+
+            .bottom-section {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Section 2 Styles */
+        .containerB {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .feature-header {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .feature-header img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .feature-header .text-content {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .feature-header .text-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .feature-header .text-content p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .feature-header .text-content a {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #0077cc;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .feature-header .text-content a:hover {
+            background-color: #005fa3;
+        }
+
+        .articles {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .article {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .article h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #222;
+        }
+
+        .article p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .article p:last-child {
+            margin-top: auto;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        @media (max-width: 768px) {
+            .feature-header {
+                flex-direction: column;
+            }
+        }
+
+        /* Section 3 Styles */
+        .containerC {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 10px;
+        }
+
+        .news-item {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .news-item img {
+            width: 150px;
+            height: 100px;
+            object-fit: cover;
+            margin-right: 15px;
+            border-radius: 5px;
+        }
+
+        .news-content {
+            flex: 1;
+        }
+
+        .news-title {
+            font-size: 1.2em;
+            margin: 0 0 5px;
+        }
+
+        .news-description {
+            font-size: 0.9em;
+            margin: 0 0 10px;
+        }
+
+        .news-meta {
+            font-size: 0.8em;
+            color: #666;
+        }
+
+        @media (max-width: 600px) {
+            .news-item {
+                flex-direction: column;
+            }
+
+            .news-item img {
+                width: 100%;
+                height: auto;
+                margin-bottom: 10px;
+            }
+        }
+		
+		
+		
+		
+		/*footer*/
+		/* Footer */
+
+.bbc-footer {
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.footer-language {
+    margin-bottom: 20px;
+}
+
+.language-btn {
+    background-color: #e0e0e0;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.footer-social {
+    margin-bottom: 20px;
+}
+
+.footer-social span {
+    margin-right: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.footer-social a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.footer-links {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #666;
+    text-decoration: none;
+    margin: 0 5px;
+    font-size: 12px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.bbc-footer p {
+    font-size: 12px;
+    color: #999;
+}	
+@media (max-width: 768px) {
+    /* Footer navigation adjustments */
+    .footer-nav {
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .footer-nav a {
+        font-size: 12px;
+        padding: 5px 0;
+    }
+
+    /* Language button adjustments */
+    .footer-language {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .language-btn {
+        width: 100%;
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    /* Social links adjustments */
+    .footer-social {
+        text-align: center;
+    }
+
+    .footer-social span {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 12px;
+    }
+
+    .footer-social a {
+        font-size: 18px;
+        margin: 0 8px;
+    }
+
+    /* Footer links adjustments */
+    .footer-links {
+        text-align: center;
+        flex-wrap: wrap;
+    }
+
+    .footer-links a {
+        font-size: 10px;
+        margin: 3px 5px;
+        display: inline-block;
+    }
+
+    /* Footer text adjustments */
+    .bbc-footer p {
+        font-size: 10px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for smaller screens */
+    .footer-nav {
+        gap: 5px;
+    }
+
+    .footer-nav a {
+        font-size: 10px;
+    }
+
+    .language-btn {
+        font-size: 10px;
+        padding: 8px;
+    }
+
+    .footer-social a {
+        font-size: 16px;
+        margin: 0 5px;
+    }
+
+    .footer-links a {
+        font-size: 9px;
+    }
+
+    .bbc-footer p {
+        font-size: 9px;
+        line-height: 1.4;
+    }
+}
+
+		
+		
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div id="upper">
+            <div id="left">
+                <a id="hemburger" href="#"><i class="fa-solid fa-bars"></i></a>
+                <a id="search" href="#"><i class="fas fa-search"></i></a>
+                
+        </div>
+            <div id="logo">
+                <div class="logo"><p>C</p></div>
+                <div class="logo"><p>S</p></div>
+                <div class="logo"><p>M</p></div>
+            </div>
+            
+            <div id="right">
+                <a href="login.html"> <button id="reg">Register</button></a>
+               <a href="login.html"> <button id="sign"><span>Sign In</span></button></a>
+            </div>
+        </div>
+        <div id="lower">
+            <a href="finale.html">Home</a>
+            <a href="News.html">News</a>
+            <a href="#">Sport</a>
+            <a href="#">Business</a>
+            <a href="innovation.html">Innovation</a>
+            <a href="#">Culture</a>
+            <a href="#">Arts</a>
+            <a href="#">Travel</a>
+            <a href="#">Earth</a>
+            <a href="#">Video</a>
+            <a href="live_page.html">Live</a>
+        </div>
+    </header>
+
+
+
+
+
+
+
+<div class="containerA">
+    <!-- Section 1 -->
+    <header class="header">
+        <h1>Innovation</h1>
+    </header>
+
+    <div class="top-section">
+        <div class="left-content">
+            <h2>The mystery of Stonehenge's long-lost megaliths</h2>
+            <p>
+                Around 4,500 years ago, the famous silhouette of Stonehenge would have looked very different. 
+                So what happened to the monument's missing stones?
+            </p>
+            <span>6 hrs ago | Future</span>
+        </div>
+        <div class="main-image">
+            <img src="https://ichef.bbci.co.uk/images/ic/1024xn/p0kcwy7m.jpg.webp" alt="Stonehenge" />
+        </div>
+        <div class="right-content">
+            <img src="https://ichef.bbci.co.uk/news/640/cpsprodpb/33a9/live/d1b22790-bf4f-11ef-aff0-072ce821b6ab.jpg.webp" alt="Google" />
+            <h3>Google suggests fixes to its search monopoly</h3>
+            <p>Google proposed new limits after a judge ruled Google illegally crushed competition in search.</p>
+            <span>9 hrs ago | Technology</span>
+        </div>
+    </div>
+	<!-- Add other cards here -->
+
+    <div class="bottom-section">
+        <div class="card">
+            <img src="https://ichef.bbci.co.uk/images/ic/800xn/p0kd3mgy.jpg.webp" alt="The video game">
+            <h4>The video game that defined the US</h4>
+            <p>The Oregon Trail was once the most widely distributed software in US schools.</p>
+            <span>1 day ago | Future</span>
+        </div>
+        
+		 <div class="card">
+        <img src="https://ichef.bbci.co.uk/images/ic/1024xn/p0kbbrrf.jpg.webp" alt="Exercise">
+        <h4>The small exercise that's a powerful mood booster</h4>
+        <p>
+          It's an age-old piece of advice, but it turns out that writing lists of good things that happen to us 
+          actually does help improve our mood.
+        </p>
+        <span>1 day ago | Future</span>
+      </div>
+      <div class="card">
+        <img src="https://ichef.bbci.co.uk/images/ic/640x360/p0k93hrw.jpg.webp" alt="Seaweed">
+        <h4>How seaweed could be used to make sustainable antibiotics</h4>
+        <p>
+          A lab in Norway is working on a new method to make antibiotics by training bacteria to eat seaweed.
+        </p>
+        <span>1 day ago | Innovation</span>
+      </div>
+      <div class="card">
+        <img src="https://ichef.bbci.co.uk/news/1024/cpsprodpb/1db7/live/79e1c920-ad94-11ef-bba3-d73e5a19f8d5.jpg.webp" alt="AI">
+        <h4>AI is trained to spot warning signs in blood tests</h4>
+        <p>AI can spot patterns in the data from blood tests that can give an early warning of disease.</p>
+        <span>2 days ago | Health</span>
+      </div>
+      <div class="card">
+	     <img src="https://ichef.bbci.co.uk/images/ic/raw/p0hdrsmy.jpg.webp" alt="AI">
+        <h4>Tech Decoded: Sign up to our newsletter</h4>
+        <p>Get timely, trusted tech news from BBC correspondents around the world, every Monday and Friday.</p>
+		<span>1 hour ago | US </span>
+      </div>
+      <div class="card">
+	     <img src="https://ichef.bbci.co.uk/news/1024/cpsprodpb/1e6e/live/ae2eb4c0-be12-11ef-97a7-0ff098912783.jpg.webp" alt="AI">
+        <h4>US bans drones in parts of New Jersey and New York</h4>
+        <p>Pilots operating in restricted zones risk being intercepted and detained by law enforcement, aviation authorities say.</p>
+        <span>1 day ago | US & Canada</span>
+		
+		
+    </div>
+</div>
+
+<!-- Section 2 -->
+<div class="containerB">
+    <div class="feature-header">
+        <img src="https://ichef.bbci.co.uk/images/ic/1024x576/p0kcsy29.jpg.webp" alt="Feature image">
+        <div class="text-content">
+            <h1>Why rituals are so important for connection</h1>
+            <p>Michael Norton has spent decades studying why human relationships last. Sharing rituals – from a clink of a glass to Christmas Day traditions – have a powerful positive effect.</p>
+            <a href="#">See more</a>
+        </div>
+    </div>
+
+    <div class="articles">
+        <div class="article">
+            <img src="https://ichef.bbci.co.uk/images/ic/480x270/p0kcgf1z.jpg.webp" alt="Article image">
+            <h3>The cancer side effect no one talks about</h3>
+            <p>Patients who beat cancer can be left with lymphedema, an incurable and painful condition.</p>
+            <p>4 days ago | Future</p>
+        </div>
+        <div class="article">
+            <img src="https://ichef.bbci.co.uk/images/ic/480x270/p0kbvkd2.jpg.webp" alt="Article image">
+            <h3>Why we become better friends as we age</h3>
+            <p>Our social goals change over our lifespan, building fulfilling connections.</p>
+            <p>6 days ago | Future</p>
+        </div>
+        <div class="article">
+            <img src="https://ichef.bbci.co.uk/images/ic/480x270/p0kbv5kt.jpg.webp" alt="Article image">
+            <h3>The violent birth of the Geminid meteor shower</h3>
+            <p>The Geminids are an astronomical highlight, creating a spectacular show every December.</p>
+            <p>13 Dec 2024 | Future</p>
+        </div>
+        <div class="article">
+            <img src="https://ichef.bbci.co.uk/images/ic/480x270/p0kb29vd.jpg.webp" alt="Article image">
+            <h3>How a long-gone tool built the modern internet</h3>
+            <p>Before there was TikTok, there was a tool that steered users down rabbit holes.</p>
+            <p>11 Dec 2024 | Future</p>
+        </div>
+        <div class="article">
+            <img src="https://ichef.bbci.co.uk/images/ic/480x270/p06tk6q6.jpg.webp" alt="Article image">
+            <h3>Can chicken soup fight a cold?</h3>
+            <p>There are plenty of home remedies for colds. Here's what evidence says.</p>
+            <p>9 Dec 2024 | Future</p>
+        </div>
+        <div class="article">
+            <img src="https://ichef.bbci.co.uk/images/ic/480x270/p0k9c2v9.jpg.webp" alt="Article image">
+            <h3>Got a recycling tip? NASA wants to hear from you</h3>
+            <p>As NASA plans Artemis missions, it looks for innovative ways to build on the Moon.</p>
+            <p>7 Dec 2024 | Future</p>
+        </div>
+    </div>
+</div>
+
+<!-- Section 3 -->
+<div class="containerC">
+    <div class="header">More Innovation</div>
+    <div class="news-item">
+        <img src="https://ichef.bbci.co.uk/news/480/cpsprodpb/4027/live/5adff460-bd4e-11ef-a164-7d6c07cbd92c.png.webp" alt="Sega News">
+        <div class="news-content">
+            <div class="news-title">Sega considering Netflix-like game subscription service</div>
+            <div class="news-description">It's another sign the industry is moving away from owning games.</div>
+            <div class="news-meta">18 hrs ago | Technology</div>
+        </div>
+    </div>
+     <div class="news-item">
+            <img src="https://ichef.bbci.co.uk/news/480/cpsprodpb/5033/live/9cc910d0-b936-11ef-8a3e-4fb745294e93.jpg.webp" alt="Romance Scammer">
+            <div class="news-content">
+                <div class="news-title">Romance scammer duped £17k from me with deepfakes</div>
+                <div class="news-description">Nikki MacLeod believed she was sending money to a real woman whom she was in a relationship with.</div>
+                <div class="news-meta">1 day ago | Edinburgh, Fife & East</div>
+            </div>
+        </div>
+
+        <div class="news-item">
+            <img src="https://ichef.bbci.co.uk/news/480/cpsprodpb/bced/live/79e73280-be0a-11ef-97a7-0ff098912783.jpg.webp" alt="Bitcoin Lie">
+            <div class="news-content">
+                <div class="news-title">Man convicted for repeatedly lying about inventing Bitcoin</div>
+                <div class="news-description">Computer scientist Craig Wright was given a suspended prison sentence for what was described as "legal nonsense."</div>
+                <div class="news-meta">2 days ago | Technology</div>
+            </div>
+        </div>
+
+        <div class="news-item">
+            <img src="https://ichef.bbci.co.uk/news/480/cpsprodpb/fcd9/live/16ea1f40-be09-11ef-97a7-0ff098912783.jpg.webp" alt="Recycling Fire">
+            <div class="news-content">
+                <div class="news-title">Recycling lorry dumps waste after battery fire</div>
+                <div class="news-description">Fire crews extinguish a blaze caused by discarded batteries catching fire in a recycling vehicle.</div>
+                <div class="news-meta">2 days ago | Dorset</div>
+            </div>
+        </div>
+		
+		
+        <div class="news-item">
+            <img src="https://ichef.bbci.co.uk/news/480/cpsprodpb/6950/live/814c8860-be12-11ef-97a7-0ff098912783.jpg.webp" alt="jail">
+            <div class="news-content">
+                <div class="news-title">Apple urged to axe AI feature after false headline</div>
+                <div class="news-description">Fire crews extinguish a blaze caused by discarded batteries catching fire in a recycling vehicle.</div>
+                <div class="news-meta">1 day ago | Us</div>
+            </div>
+        </div>
+		
+		
+        <div class="news-item">
+            <img src="https://ichef.bbci.co.uk/news/480/cpsprodpb/d1f0/live/e23cefe0-bd5c-11ef-9388-3da9ad62abc7.jpg.webp" alt="tiktok">
+            <div class="news-content">
+                <div class="news-title">US Supreme Court to hear TikTok challenge to potential ban</div>
+                <div class="news-description">The US Supreme Court has agreed to hear last-ditch legal arguments from TikTok as to why it should not be banned or sold in the US.</div>
+                <div class="news-meta">2 days ago | Us</div>
+            </div>
+        </div>
+		
+		
+		
+        <div class="news-item">
+            <img src="https://ichef.bbci.co.uk/news/1024/cpsprodpb/66d1/live/905aea50-32ed-11ef-90be-b75b34b0bbb2.jpg.webp" alt="nasa">
+            <div class="news-content">
+                <div class="news-title">Nasa astronauts Butch and Suni's homecoming delayed again</div>
+                <div class="news-description">Nasa says that the astronauts stuck on the International Space Station will have to wait even longer to get home.</div>
+                <div class="news-meta">1 day ago | America</div>
+            </div>
+        </div>
+		
+		
+		<div class="news-item">
+            <img src="https://ichef.bbci.co.uk/images/ic/480x270/p0kcndv2.jpg.webp" alt="ship">
+            <div class="news-content">
+                <div class="news-title">The controversial machine sending CO2 to the ocean and making hydrogen</div>
+                <div class="news-description">Equatic is among a wave of start-ups exploring how the ocean could be harnessed to capture and store carbon. But not everyone is sure it's such a good idea..</div>
+                <div class="news-meta">1 hrs ago | Future</div>
+            </div>
+        </div>
+		
+		<div class="news-item">
+            <img src="https://ichef.bbci.co.uk/news/480/cpsprodpb/75d2/live/9a4ab640-bb9a-11ef-a2ca-e99d0c9a24e3.jpg.webp" alt="Facebook">
+            <div class="news-content">
+                <div class="news-title">How Facebook restricted news in Palestinian territories</div>
+                <div class="news-description">Facebook has severely restricted the ability of Palestinian news outlets to reach an audience during the Israel-Gaza war, according to BBC research.</div>
+                <div class="news-meta">4 days ago | Teachnology</div>
+            </div>
+        </div>
+		
+		
+		<!--footer-->
+		<footer class="bbc-footer">
+        <div class="footer-nav">
+            <a href="#">Home</a>
+            <a href="#">News</a>
+            <a href="#">Sport</a>
+            <a href="#">Business</a>
+            <a href="#">Innovation</a>
+            <a href="#">Culture</a>
+            <a href="#">Arts</a>
+            <a href="#">Travel</a>
+            <a href="#">Earth</a>
+            <a href="#">Video</a>
+            <a href="#">Live</a>
+            <a href="#">Audio</a>
+            <a href="#">Weather</a>
+            <a href="#">CSM Shop</a>
+        </div>
+        <div class="footer-language">
+            <button class="language-btn">CSM in other languages &#9662;</button>
+        </div>
+        <div class="footer-social">
+            <span>Follow CSM on:</span>
+            <a href="#"><i class="fa-solid fa-x"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            
+        </div>
+        <div class="footer-links">
+            <a href="#">Terms of Use</a> |
+            <a href="#">About the CSM</a> |
+            <a href="#">Privacy Policy</a> |
+            <a href="#">Cookies</a> |
+            <a href="#">Accessibility Help</a> |
+            <a href="#">Contact the BBC</a> |
+            <a href="#">Advertise with us</a> |
+            <a href="#">Do not share or sell my info</a> |
+            <a href="#">Contact technical support</a>
+        </div>
+        <p>&copy; 2024 CSM. All rights reserved. The CSM is not responsible for the content of external sites.
+            <a href="#">Read about our approach to external linking</a>.
+        </p>
+    </footer>
+
+	
+	
+	
+	
+	
+</div>
+
+</body>
+</html>

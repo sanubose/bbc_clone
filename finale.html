@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>whole News</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        #header{
+            position: sticky;
+            top: -1px;
+            z-index: 1;
+            background-color: white;
+        }
+        #upper{
+            border: 1px solid rgb(230, 227, 227);
+            height: 60px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo{
+            background-color: black;
+            height:33px;
+            width: 33px;
+            font-size: 25px;
+            font-family: sans-serif;
+            font-weight:bold;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            margin: 15px 5px;
+        }
+        .logo p{
+            color: aliceblue;
+            margin: 5px;
+            font-size: 25px;
+        }
+        #logo{
+            display: flex;
+            justify-content: center;
+        }
+        #left {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+        #left a{
+            padding: 20px;
+            font-size: larger;
+            color: black;
+        }
+        #right button{
+            border: 0cap;
+            height: 40px;
+            width: 100px;
+            font-family: "Arial",sans-serif;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        #reg{
+            background-color: black;
+            color: aliceblue;
+        }
+        #sign{
+            background-color: white;
+        }
+        #lower{
+            display: flex;
+            justify-content: center;
+            border: 1px solid rgb(216, 216, 216);
+            margin:0;
+    
+        }
+        #lower a{
+            text-decoration: none;
+            color: black;
+            font-family: sans-serif;
+            font-weight:bold;
+            padding: 0 7px;
+            margin: 10px 0;
+        }
+       /*end head */
+	
+	
+	 * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+      color: #333;
+      padding: 0px 20px;
+    }
+
+    .news-section {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      gap: 20px;
+      margin-top: 12px;
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .news-item, .main-news, .side-news {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 15px;
+    }
+
+    .news-image, .main-image {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .main-image {
+      margin-bottom: 15px;
+    }
+
+    h2, h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    ul li {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .second-section {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .second-column {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .second-image {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .section-border {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      border: none;
+      border-top: 2px solid #5b5a5a; /* Dark horizontal line */
+    }
+
+    .bbc-caption {
+      font-size: 16px;
+      color: #000; /* Dark text */
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .third-section {
+      margin-top: 40px;
+    }
+
+    .third-section h2 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .third-section .news-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 15px;
+    }
+
+    .third-section .news-item {
+      width: 20%;
+    }
+
+    .third-section .news-item h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .third-section .news-item p {
+      font-size: 14px;
+      color: #666;
+    }
+
+
+	/* nwazcode */
+
+	.container {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+.image-section {
+    flex: 1;
+    position: relative;
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.text-section {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.text-section h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.text-section p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.text-section button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.text-section button:hover {
+    background-color: #444;
+}
+.heading {
+    font-size: 35px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .text-section {
+        padding-left: 0;
+        margin-top: 20px;
+    }
+}
+/* styles.css */
+hr {
+    border: 3px solid rgb(15, 15, 15);  /* Make the line 5px thick and blue */
+    width: 100%;               /* Set the width of the line */
+    margin: 1px auto;        /* Center the line with spacing around it */
+}
+h2{
+    color: #111;
+}
+.a {
+    color: #aaa;
+}
+.slider-container {
+    width: 90%;
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.cards-container {
+    display: flex;
+}
+
+.card {
+    flex: 0 0 25%;
+    margin-right: 10px;
+    background-color: #222;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: left;
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.play-button {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    font-size: 16px;
+    margin: 0 0 10px;
+}
+
+.card-content p {
+    font-size: 14px;
+    margin: 0 0 10px;
+}
+
+.card-content span {
+    font-size: 12px;
+    color: #aaa;
+}
+
+.nav-buttons {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-buttons button {
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.nav-buttons button:hover {
+    background: rgba(255, 255, 255, 0.7);
+    color: #111;
+}
+
+.slider-container .slider {
+    scroll-behavior: smooth;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.slider-container .slider::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* harshit code */
+
+
+#cardAs {
+    display: flex;
+    margin: 12px;
+    height: auto;
+
+
+}
+
+.cardA {
+
+    width: 300px;
+    height: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 22px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.cardA img {
+    margin-top: 15px;
+    width: 250px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+.minline,
+.timeloc {
+    margin-top: 15px;
+
+
+
+}
+
+.cardA>p,
+h3 {
+    font-size: 20px;
+    padding-top: 15px;
+    margin-bottom: 15px;
+
+}
+
+.timeloc>span {
+    color: gray;
+    padding: 5px;
+    font-size: small;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.line {
+    border: 1px solid;
+}
+
+.minline {
+    box-shadow: 0px 0px 0px 0.1px rgb(17, 15, 15);
+
+}
+
+
+.outline {
+    border: 0.2px solid rgb(143, 138, 138);
+    box-shadow: 0px 0px 0px 0.1px rgb(17, 15, 15);
+    margin: 20px 0px 30px 0px;
+}
+.slideboxA {
+    background-color: black;
+    overflow: hidden;
+    position: relative;
+    padding: 25px;
+    margin-top: 15px;
+}
+
+.card-wrapper {
+    display: flex;
+    transition: transform 0.4s ease-out;
+	width: max-content;
+}
+.card1 {
+    width: 250px;
+    margin: 40px 25px 50px 25px;
+
+    box-shadow: 0 4px 6px rgba(9, 8, 8, 0.2);
+    border-radius: 8px;
+    padding: 2px 2px 15px 10px;
+    border-radius: 12px;
+    color: rgb(215, 212, 206);
+}
+.arrow {
+position: absolute;
+    
+    transform: translateY(-50%);
+    font-size: 60px;
+    color: #f4eded;
+    padding: 5px 10px;
+    cursor: pointer;
+    user-select: none;
+    z-index: 10;
+}
+
+.arrow.left {
+    left: 400px;
+     bottom: -50px;
+    
+
+
+}
+
+.arrow.right {
+    right: 400px;
+     bottom: -50px;
+    
+
+
+}
+.slideline {
+
+    width: 100%;
+    border: 0.2px solid rgb(218, 244, 246);
+    margin-top: 42px;
+}
+		
+		
+	/*footer*/
+/* Footer */
+.bbc-footer {
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.footer-language {
+    margin-bottom: 20px;
+}
+
+.language-btn {
+    background-color: #e0e0e0;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.footer-social {
+    margin-bottom: 20px;
+}
+
+.footer-social span {
+    margin-right: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.footer-social a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.footer-links {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #666;
+    text-decoration: none;
+    margin: 0 5px;
+    font-size: 12px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.bbc-footer p {
+    font-size: 12px;
+    color: #999;
+}	
+		
+
+		
+		
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div id="upper">
+            <div id="left">
+                <a id="hemburger" href="#"><i class="fa-solid fa-bars"></i></a>
+                <a id="search" href="#"><i class="fas fa-search"></i></a>
+                
+        </div>
+            <div id="logo">
+                <div class="logo"><p>C</p></div>
+                <div class="logo"><p>S</p></div>
+                <div class="logo"><p>M</p></div>
+            </div>
+            
+            <div id="right">
+               <a href="login.html"> <button id="reg">Register</button></a>
+               <a href="login.html"> <button id="sign"><span>Sign In</span></button></a>
+            </div>
+        </div>
+        <div id="lower">
+            <a href="finale.html">Home</a>
+            <a href="News.html">News</a>
+            <a href="#">Sport</a>
+            <a href="#">Business</a>
+            <a href="innovation.html">Innovation</a>
+            <a href="#">Culture</a>
+            <a href="#">Arts</a>
+            <a href="#">Travel</a>
+            <a href="#">Earth</a>
+            <a href="#">Video</a>
+            <a href="live_page.html">Live</a>
+        </div>
+    </header>
+
+      <div class="news-section">
+    <!-- First Column -->
+    <div class="column first-column">
+      <div class="news-item">
+        <img src="https://ichef.bbci.co.uk/news/480/cpsprodpb/da76/live/b52ef020-be2e-11ef-a761-a90dfaf55a88.jpg.webp" alt="Putin" class="news-image">
+        <h3>I should have invaded Ukraine earlier, Putin tells Russians in TV marathon</h3>
+        <p>Putin tells an end-of-year press conference there should have been "systemic preparation" for the full-scale invasion.</p>
+        <p>10 hrs ago | Europe</p>
+      </div>
+      <div class="news-item">
+        <img src="https://ichef.bbci.co.uk/news/480/cpsprodpb/6369/live/312082c0-be75-11ef-a4b0-83a93ef47ff9.jpg.webp" alt="North Korean troops" class="news-image">
+        <h3>Don't underestimate North Korean troops in Russia, say former soldiers</h3>
+        <p>Army defectors say units sent to fight against Ukraine will have high morale but won't be battle hardened.</p>
+        <p>2 hrs ago | World</p>
+      </div>
+    </div>
+
+    <!-- Middle Column -->
+    <div class="column middle-column">
+      <div class="main-news">
+        <img src="https://ichef.bbci.co.uk/news/640/cpsprodpb/e3f5/live/02c4dcf0-be4d-11ef-a2ca-e99d0c9a24e3.jpg.webp" alt="Musk and Trump" class="main-image">
+        <h2>Musk flexes influence over Congress in shutdown drama</h2>
+        <ul>
+          <li>5 things to know about a looming US government shutdown</li>
+          <li>Why shutdowns seem to only happen in the US</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Third Column -->
+    <div class="column third-column">
+      <div class="side-news">
+        <h3>Syria's rebel leaders say they've broken with their jihadist past - can they be trusted?</h3>
+        <p>47 mins ago | BBC InDepth</p>
+      </div>
+      <div class="side-news">
+        <h3>Soldier-spies in Myanmar help pro-democracy rebels make crucial gains</h3>
+        <p>2 hrs ago | Asia</p>
+      </div>
+      <div class="side-news">
+        <h3>Luigi Mangione returns to New York to face federal charges in fatal shooting</h3>
+        <p>1 hr ago | US & Canada</p>
+      </div>
+      <div class="side-news">
+        <h3>Defendants face judgement for actions that led to beheading of French teacher</h3>
+        <p>2 hrs ago | Europe</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 2 -->
+  <hr class="section-border">
+  <div class="bbc-caption">Only from BBC</div>
+  
+  <div class="second-section">
+    <div class="second-column">
+      <img src="https://ichef.bbci.co.uk/news/1024/cpsprodpb/60d5/live/8fe8ac50-b3a9-11ef-a0f2-fd81ae5962f4.png.webp" alt="Example Image 1" class="second-image">
+      <h3>AI is trained to spot warning signs in blood tests</h3>
+      <p>AI can spot patterns in the data from blood tests that can give an early warning of disease.</p>
+      <p>3 hrs ago </p>
+    </div>
+    <div class="second-column">
+      <img src="https://ichef.bbci.co.uk/images/ic/1024x576/p0kcs9q7.jpg.webp" alt="Example Image 2" class="second-image">
+      <h3>The reason TV was so poor in 2024</h3>
+      <p>This year was defined by a host of average TV shows that were glossy and watchable but forgettable - as epitomised by the Nicole Kidman thriller The Perfect Couple. Here's why.</p>
+      <p>15 hrs ago | Culture</p>
+    </div>
+  </div>
+
+  <hr class="section-border">
+
+  <!-- Section 3 -->
+  <div class="third-section">
+    <h2>More news</h2>
+    <div class="news-row">
+      <div class="news-item">
+        <h3>Watch BBC's Steve Rosenberg challenge Putin on his 25 years in power in Russia</h3>
+        <p>9 hrs ago | Europe</p>
+      </div>
+      <div class="news-item">
+        <h3>Republicans fail to pass revised bill that would avert US government shutdown</h3>
+        <p>10 hrs ago | Europe</p>
+      </div>
+      <div class="news-item">
+        <h3>Gisèle Pelicot's ex-husband jailed for 20 years in mass rape trial</h3>
+        <p>10 hrs ago | Europe</p>
+      </div>
+      <div class="news-item">
+        <h3>Analysis: Syria's new ruler is politically astute - but can he keep his promises?</h3>
+        <p>8 hrs ago | Middle East</p>
+      </div>
+      <div class="news-item">
+        <h3>UK minister named in Bangladesh corruption probe</h3>
+        <p>11 hrs ago | London</p>
+      </div>
+    </div>
+  </div>
+  <hr class="section-border">
+  <!-- Section 4 -->
+  <div class="slider-container">
+        <div class="nav-buttons">
+            <button id="prev">&#9664;</button>
+            <button id="next">&#9654;</button>
+        </div>
+        <h2>Must Watch</h2>
+        <div class="slider" id="slider">
+            <div class="cards-container">
+                <div class="card">
+                    <img src="https://ichef.bbci.co.uk/news/1536/cpsprodpb/a5b8/live/0eae7fb0-bdd7-11ef-a2ca-e99d0c9a24e3.jpg.webp" alt="Media 1">
+                    <button class="play-button">▶</button>
+                    <div class="card-content">
+                        <h3><a href=" https://www.bbc.com/news/videos/cvgr0r112nno">     Watch: BBC speaks to Syrian rebel leader Ahmed al-Sharaa</h3></a>
+                        <p>Sharaa led the rebel offensive that toppled the Assad regime in Syria less than two weeks ago.</p>
+                        <span>12 hrs ago | Middle East</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://ichef.bbci.co.uk/news/1536/cpsprodpb/a318/live/22bf7290-bcd6-11ef-aff0-072ce821b6ab.jpg.webp" alt="Media 2">
+                    <button class="play-button">▶</button>
+                    <div class="card-content">
+                        <h3>Canadians respond to Trump's jab that country could become 51st state</h3>
+                        <p>The US president-elect recently referred to Prime Minister Justin Trudeau as the "governor" of the "Great State of Canada".</p>
+                        <span>19 hrs ago | US & Canada</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://ichef.bbci.co.uk/news/1536/cpsprodpb/141b/live/ac9fdf00-bd70-11ef-aff0-072ce821b6ab.jpg.webp" alt="Media 3">
+                    <button class="play-button">▶</button>
+                    <div class="card-content">
+                        <h3>Thief complains after video stealing parcel appears online</h3>
+                        <p>The suspect, who stole a package off a front porch, returned days later after the victim shared footage of the theft.</p>
+                        <span>14 hrs ago | US & Canada</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://ichef.bbci.co.uk/images/ic/1920x1080/p0kcrl7d.jpg.webp" alt="Media 4">
+                    <button class="play-button">▶</button>
+                    <div class="card-content">
+                        <h3>The little-known truth behind a Christmas tale</h3>
+                        <p>Science says that Santa must have a crew of female reindeer. So why do we think Rudolph the reindeer is a boy?</p>
+                        <span>1 day ago | Culture & Experiences</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://ichef.bbci.co.uk/images/ic/1920x1080/p0kbykr2.jpg.webp" alt="Media 5">
+                    <button class="play-button">▶</button>
+                    <div class="card-content">
+                        <h3>Jesse Eisenberg cast Kieran Culkin based on his 'essence'
+                        </h3>
+                        <p>Kieran Culkin reveals that he was cast in 'A Real Pain' without an audition, and tried to back out of the film two weeks before shooting.
+                        <span>2 days ago | World News</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://ichef.bbci.co.uk/news/1536/cpsprodpb/eb3d/live/81c75af0-bd94-11ef-aff0-072ce821b6ab.jpg.webp" alt="Media 6">
+                    <button class="play-button">▶</button>
+                    <div class="card-content">
+                        <h3>Agony of period pain left woman in hospital
+                            Example Headline 6</h3>
+                        <p>Emily Handstock has struggled with debilitating period pain for 10 years and feels society had "normalised" what she is going through.
+
+                            The 25-year-old said people struggled to believe her, even though morphine "barely touched the sides" in relieving her pain when she was admitted to hospital.                            
+                        </p>
+                        <span>3 days ago | Science</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://ichef.bbci.co.uk/news/1536/cpsprodpb/21ea/live/fecd7810-bcac-11ef-a0f2-fd81ae5962f4.jpg.webp" alt="Media 7">
+                    <button class="play-button">▶</button>
+                    <div class="card-content">
+                        <h3>Ros Atkins On... Igor Kirillov's death
+                        </h3>
+                        <p>Ukrainian sources have told the BBC that the country's security service was behind the killing of a high-ranking general in the Russian armed forces and his assistant.</p>
+                        <span>4 days ago | Technology</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://ichef.bbci.co.uk/news/1536/cpsprodpb/7c4b/live/4a5dfac0-bc85-11ef-a2ca-e99d0c9a24e3.jpg.webp" alt="Media 8">
+                    <button class="play-button">▶</button>
+                    <div class="card-content">
+                        <h3>Teacher was screaming 'help' recounts 8-year-old school shooting survivor</h3>
+                        <p>Two people were fatally shot and several injured during a school shooting at Abundant Life Christian School in Madison, Wisconsin.
+                        </p>
+                        <span>5 days ago | Environment</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="section-border">
+	<!-- Section 5 -->
+    <div class="container">
+        <div class="image-section">
+            <img src="https://ichef.bbci.co.uk/images/ic/1920x1080/p0kcxgyr.jpg.webp" alt="Mural depicting Gabriel Garcia Marquez with elements from his works">
+        </div>
+        <div class="text-section">
+            <div class="heading">Travel ></div>
+            <h2>The towns that inspired 100 Years of Solitude</h2>
+            <p>As a new Netflix series thrusts Gabriel García Márquez's masterpiece back into the spotlight, these are the real-life places that inspired the writer's magical realism.</p>
+            <button><a href="https://www.bbc.com/travel/article/20241218-the-towns-that-inspired-one-hundred-years-of-solitude"> see more</button></a>
+        </div>
+    </div>
+    <hr class="section-border">
+	<!-- Section 6 -->
+    <div class="container">
+        <div class="text-section">
+            <div class="heading">Earth ></div>
+            <h2>Can bird flu be stopped?</h2>
+            <p>Bird flu is decimating wildlife around the world and is now spreading in cows. In the handful of human cases seen so far it has been extremely deadly.</p>
+            <button><a href="https://www.bbc.com/future/article/20240425-how-dangerous-is-bird-flu-spread-to-wildlife-and-humans" > see more</button></a>
+        </div>
+        <div class="image-section">
+            <img src="https://ichef.bbci.co.uk/images/ic/1920x1080/p0ht79wt.jpg.webp" alt="Bird flu impact - dead birds in snowy landscape with people in protective gear">
+        </div>
+    </div>
+  <hr class="section-border">
+  <script>
+	     const slider = document.getElementById('slider');
+        const prev = document.getElementById('prev');
+        const next = document.getElementById('next');
+
+        let scrollAmount = 0;
+
+        next.addEventListener('click', () => {
+            slider.scrollBy({ left: 300, behavior: 'smooth' });
+        });
+
+        prev.addEventListener('click', () => {
+            slider.scrollBy({ left: -300, behavior: 'smooth' });
+        });
+	
+	
+	</script>
+  
+  <!-- Section 7 -->
+  
+        <div class="slideboxA">
+        <div style="border: 1px solid white; margin: 22px;"></div>
+        <h2 style="color: white; margin-left: 25px;">Discover more from the BBC</h2>
+        <div class="arrow left" onclick="slideLeft()">&#8249;</div>
+        <div class="card-wrapper">
+
+            <div class="card1">
+                <img src="https://ichef.bbci.co.uk/images/ic/1920x1080/p0hdrsmy.jpg.webp" width="222px" alt="">
+                <h3>Tech Decoded</h3>
+                <p>Get timely, trusted tech news from BBC correspondents around the world, every Monday and Friday.</p>
+                <div class="slideline"></div>
+            </div>
+
+            <div class="card1">
+                <img src="	https://ichef.bbci.co.uk/images/ic/raw/p0k21mvc.jpg.webp" width="222px" alt="">
+                <h3>Download the CSM app</h3>
+                <p>Click here to download the BBC app for Apple and Android devices.</p>
+                <div class="slideline"></div>
+            </div>
+
+            <div class="card1">
+                <img src="	https://ichef.bbci.co.uk/images/ic/raw/p0jp296j.jpg.webp" width="222px" alt="">
+                <h3>US Election Unspun</h3>
+                <p>Cut through the spin with North America correspondent Anthony Zurcher - in your inbox every Wednesday and Friday.</p>
+                <div class="slideline"></div>
+            </div>
+
+            <div class="card1">
+                <img src="https://ichef.bbci.co.uk/images/ic/640x360/p0gstygv.jpg.webp" width="222px" alt="">
+                <h3>Listen to The Global Story</h3>
+                <p>Global perspectives on one big story. In-depth insights from the BBC, the world's most trusted international news provider.</p>
+                <div class="slideline"></div>
+            </div>
+
+            <div class="card1">
+                <img src="https://ichef.bbci.co.uk/images/ic/raw/p0k21mq7.jpg.webp" width="222px" alt="">
+                <h3>Register for a CSM account</h3>
+                <p>Don't have time to read everything right now? Your BBC account lets you save articles and videos for later.</p>
+                <div class="slideline"></div>
+            </div>
+
+            <div class="card1">
+                <img src="https://ichef.bbci.co.uk/images/ic/1920x1080/p0h74xp9.jpg.webp" width="222px" alt="">
+                <h3>The Essential List</h3>
+                <p>The week’s best stories, handpicked by CSM editors, in your inbox every Friday.</p>
+                <div class="slideline"></div>
+
+            </div>
+
+            <div class="card1">
+                <img src="https://ichef.bbci.co.uk/images/ic/1920x1080/p0h74xqs.jpg.webp" width="222px" alt="">
+                <h3>Sign up to News Briefing</h3>
+                <p>News and expert analysis for every schedule. Get the morning and evening editions of our flagship newsletter in your inbox.</p>
+                <div class="slideline"></div>
+			</div>
+
+        </div>
+        <div class="arrow right" onclick="slideRight()">&#8250;</div>
+    </div>
+	<hr class="section-border">
+	<script>
+        const cardWrapper = document.querySelector('.card-wrapper');
+let offset = 0;
+
+function slideRight() {
+    const maxOffset = -(cardWrapper.scrollWidth - cardWrapper.parentElement.offsetWidth);
+    if (offset > maxOffset) {
+        offset -= 210;
+        if (offset < maxOffset) offset = maxOffset;
+        cardWrapper.style.transform = `translateX(${offset}px)`;
+    }
+}
+
+function slideLeft() {
+    if (offset < 0) {
+        offset += 210;
+        if (offset > 0) offset = 0;
+        cardWrapper.style.transform = `translateX(${offset}px)`;
+    }
+}
+          
+		  
+</script>
+	
+	
+	
+           <!-- Section 8 -->
+		   
+		   
+		   
+		   
+		   
+		   
+		   
+    <div id="containerA">
+        <div id="cardAs">
+
+            <div class="cardA">
+                <div class="line"></div>
+                <h3>US & Canada news<div style="display: inline; margin:0px 0px 0px 20px;  color: black; font-size: 42px; font-weight: 100;">&#8250;</div></h3>
+                <p>Motive 'combination of factors' in Wisconsin school shooting</p>
+                <span class="timeloc"><span>6 hrs ago</span>|<span>US & Canada</span></span>
+                <div class="minline"></div>
+                <p>Congress in disarray and shutdown looms as Trump, Musk slam spending deal</p>
+               
+                <span class="timeloc"><span>6 hrs ago</span>|<span>US & Canada</span></span>
+                <div class="minline"></div>
+
+                <p>Montana top court upholds landmark youth climate ruling</p>
+                <span class="timeloc"><span>6 hrs ago</span>|<span>US & Canada</span></span>
+                <div class="minline"></div>
+                <img src="https://ichef.bbci.co.uk/news/640/cpsprodpb/834c/live/6bce71b0-bd36-11ef-aff0-072ce821b6ab.jpg.webp"  alt="">
+                <p>'Nothing nefarious': Biden seeks to reassure US over drone mystery</p>
+                <span class="timeloc"><span>15 hrs ago</span>|<span>US & Canada</span></span>
+                <div class="minline"></div>
+
+            </div>
+
+            <div class="cardA">
+                <div class="line"></div>
+                <h3>Israel-Gaza war <div style="display: inline; margin:0px 0px 0px 20px;  color: black; font-size: 42px; font-weight: 100;" >&#8250;</div></h3>
+                <p>Eighteen in court after pro-Palestine protest</p>
+                
+                <span class="timeloc"><span>8 hrs ago</span>|<span>Wales</span></span>
+                <div class="minline"></div>
+                <p>How Facebook restricted news in Palestinian territories</p>
+                <span class="timeloc"><span>1 hrs ago</span>|<span>Technology</span></span>
+                <div class="minline"></div>
+
+                <p>Gaza ceasefire talks in final stage, Palestinian negotiator tells BBC</p>
+             
+                <span class="timeloc"><span>2 hrs ago</span>|<span>Middle East</span></span>
+                <div class="minline"></div>
+
+                <img src="	https://ichef.bbci.co.uk/news/480/cpsprodpb/f790/live/8f481e50-bbf3-11ef-82f1-cfb7c83ea5b0.jpg.webp" alt="">
+                <p>Israeli foreign minister calls Ireland's premier 'antisemitic'</p>
+                <span class="timeloc"><span>3 days ago</span>|<span>Europe</span></span>
+                <div class="minline"></div>
+
+            </div>
+
+            <div class="cardA">
+                <div class="line"></div>
+                <h3>War in Ukraine <div style="display: inline; margin:0px 0px 0px 20px;  color: black; font-size: 42px; font-weight: 100;"> &#8250;</div></h3>
+                <p>What we know about North Korean troops fighting Russia's war</p>
+                <span class="timeloc"><span>3 hrs ago</span>|<span>World</span></span>
+                <div class="minline"></div>
+                <p>'No more war' - Ukraine boy's plea in parliament</p>               
+                <span class="timeloc"><span>4 hrs ago</span>|<span>Dorset</span></span>
+                <div class="minline"></div>
+                <p>At least 100 North Koreans dead in Ukraine war, says South</p>
+                <span class="timeloc"><span>4 hrs ago</span>|<span>World</span></span>
+                <div class="minline"></div>
+				<img src="https://ichef.bbci.co.uk/news/480/cpsprodpb/0a70/live/8db6d260-bdd4-11ef-aff0-072ce821b6ab.jpg.webp" alt="">
+                <p>UK considers sending troops to train Ukrainians</p>
+                <span class="timeloc"><span>8 hrs ago</span>|<span>Europe</span></span>
+                <div class="minline"></div>
+
+            </div>
+
+            <div class="cardA">
+                <div class="line"></div>
+                <h3>More world news <div style="display: inline; margin:0px 0px 0px 20px;  color: black; font-size: 42px; font-weight: 100;">&#8250;</div></h3>
+                <p>Minister named in Bangladesh corruption probe </p>
+                <span class="timeloc"><span>26 mins ago</span>|<span>Asia</span></span>
+                <div class="minline"></div>
+                <p>Israel strikes Houthi targets in Yemen after missile attack</p>
+                <span class="timeloc"><span>47 mins ago</span>|<span>Middle East</span></span>
+                <div class="minline"></div>
+				<p>Macron lands in cyclone-hit Mayotte bringing food and health aid</p>
+                <span class="timeloc"><span>2 hrs ago</span>|<span>Europe</span></span>
+                <div class="minline"></div>
+                <img src="https://ichef.bbci.co.uk/news/480/cpsprodpb/03a9/live/d1d29fa0-bdd5-11ef-a172-a7220e111ab8.png.webp" alt="">
+                <p>Google Street View image helps police unlock murder case</p>
+                <span class="timeloc"><span>14 hrs ago</span>|<span>Europe</span></span>
+                <div class="minline"></div>
+            </div>
+
+        </div>
+    </div>
+		<hr class="section-border">
+	<!-- Section 9 -->
+	<div id="containerA">
+        <div id="cardAs">
+
+            <div class="cardA">
+                <div class="line"></div>
+                <h3>Culture <div style="display: inline; margin:0px 0px 0px 20px;  color: black; font-size: 42px; font-weight: 100;">&#8250;</div></h3>
+                <p>The 20 best TV shows of 2024</p>
+                <span class="timeloc"><span>1 days ago</span>|<span>Culture</span></span>
+                 <div class="minline"></div>
+                <p>Singer Elyanna on Palestinian identity, Coldplay and 'trusting the process'</p>
+                <span class="timeloc"><span>2 days ago</span>|<span>Middle East</span></span>
+                <div class="minline"></div>
+
+                <p>Kneecap shortlisted for two Academy Award nominations</p>
+                <span class="timeloc"><span>2 days ago</span>|<span>Northern Ireland</span></span>
+                <div class="minline"></div>
+                <img src="https://ichef.bbci.co.uk/images/ic/640x360/p0kcm7x6.jpg.webp" alt="">
+                <p>Mufasa: The Lion King is a 'contrived cash-in' ★★☆☆☆</p>
+                <span class="timeloc"><span>2 days ago</span>|<span>Culture</span></span>
+                <div class="minline"></div>
+
+            </div>
+
+            <div class="cardA">
+                <div class="line"></div>
+                <h3>Arts <div style="display: inline; margin:0px 0px 0px 20px;  color: black; font-size: 42px; font-weight: 100;"> &#8250;</div></h3>
+                <p>How a 1990s Swan Lake changed dance forever</p>
+                <span class="timeloc"><span>24 Nov 2024</span>|<span>Culture</span></span>
+                <div class="minline"></div>
+                <p>Artists imagine a new utopia for Kenya's capital</p>
+                <span class="timeloc"><span>30 Nov 2024</span>|<span>Africa</span></span>
+                <div class="minline"></div>
+
+                <p>How The Devil Wears Prada went from movie to musical</p>
+                <span class="timeloc"><span>7 Dec 2024</span>|<span>London</span></span>
+                <div class="minline"></div>
+
+                <img src="https://ichef.bbci.co.uk/news/480/cpsprodpb/7121/live/eec96440-ac7d-11ef-a696-6fb31f1ba7d2.jpg.webp" alt="">
+                <p>Painting of Māori elder fetches record price in NZ auction</p>
+                <span class="timeloc"><span>27 Nov 2024</span>|<span>Asia</span></span>
+                <div class="minline"></div>
+
+            </div>
+
+            <div class="cardA">
+                <div class="line"></div>
+                <h3>Travel <div style="display: inline; margin:0px 0px 0px 20px;  color: black; font-size: 42px; font-weight: 100;">&#8250;</div></h3>
+                <p>The towns that inspired 100 Years of Solitude</p>
+                <span class="timeloc"><span>30 mins ago</span>|<span>Travel</span></span>
+                <div class="minline"></div>
+                <p>Europe's borderless town that embraces two cultures</p>
+                <span class="timeloc"><span>2 days ago</span>|<span>Travel</span></span>
+                <div class="minline"></div>
+                <p>How do you ski when there's no longer snow?</p>
+                <span class="timeloc"><span>3 days ago</span>|<span>Travel</span></span>
+                <div class="minline"></div>
+                <img src="https://ichef.bbci.co.uk/images/ic/640x360/p0k7hwt3.jpg.webp" alt="">
+                <p>The addictive love cake only baked at Christmas</p>
+                <span class="timeloc"><span>4 days ago</span>|<span>Travel</span></span>
+                <div class="minline"></div>
+
+            </div>
+
+            <div class="cardA">
+                <div class="line"></div>
+                <h3>Earth <div style="display: inline; margin:0px 0px 0px 20px;  color: black; font-size: 42px; font-weight: 100;">&#8250;</div></h3>
+                <p>NY homeowner makes jaw-dropping mastodon discovery in backyard</p>
+                <span class="timeloc"><span>18 hrs ago</span>|<span>US & Canada</span></span>
+                <div class="minline"></div>
+                <p>Macron lands in cyclone-hit Mayotte bringing food and health aid</p>
+                <span class="timeloc"><span>5 hrs ago</span>|<span>Europe</span></span>
+                <div class="minline"></div>
+
+                <p>'Murder hornets' eradicated in the US, officials say</p>
+                <span class="timeloc"><span>14 hrs ago</span>|<span>Europe</span></span>
+                <div class="minline"></div>
+				<img src="	https://ichef.bbci.co.uk/news/640/cpsprodpb/586a/live/f2fa6fc0-bd10-11ef-a0f2-fd81ae5962f4.jpg.webp" alt="">
+                <p>Polar bears losing 'big dinner plate' in Arctic town</p>
+                <span class="timeloc"><span>2 days ago</span>|<span>Climate</span></span>
+                <div class="minline"></div>
+			</div>
+				
+        </div>
+    </div>
+<hr class="section-border">
+	
+	
+    <!--footer-->
+	<footer class="bbc-footer">
+        <div class="footer-nav">
+            <a href="#">Home</a>
+            <a href="#">News</a>
+            <a href="#">Sport</a>
+            <a href="#">Business</a>
+            <a href="#">Innovation</a>
+            <a href="#">Culture</a>
+            <a href="#">Arts</a>
+            <a href="#">Travel</a>
+            <a href="#">Earth</a>
+            <a href="#">Video</a>
+            <a href="#">Live</a>
+            <a href="#">Audio</a>
+            <a href="#">Weather</a>
+            <a href="#">CSM Shop</a>
+        </div>
+        <div class="footer-language">
+            <button class="language-btn">CSM in other languages &#9662;</button>
+        </div>
+        <div class="footer-social">
+            <span>Follow CSM on:</span>
+            <a href="#"><i class="fa-solid fa-x"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            
+        </div>
+        <div class="footer-links">
+            <a href="#">Terms of Use</a> |
+            <a href="#">About the CSM</a> |
+            <a href="#">Privacy Policy</a> |
+            <a href="#">Cookies</a> |
+            <a href="#">Accessibility Help</a> |
+            <a href="#">Contact the BBC</a> |
+            <a href="#">Advertise with us</a> |
+            <a href="#">Do not share or sell my info</a> |
+            <a href="#">Contact technical support</a>
+        </div>
+        <p>&copy; 2024 CSM. All rights reserved. The CSM is not responsible for the content of external sites.
+            <a href="#">Read about our approach to external linking</a>.
+        </p>
+    </footer>
+
+
+</body>
+</html>

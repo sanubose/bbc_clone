@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+   
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: #333;
+            padding: 0px 20px;
+        
+        }
+
+        .news-section {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+          margin: 10px;
+          gap: 15px;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .news-item,
+        .main-news,
+        .side-news {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 15px;
+        }
+
+        .news-image,
+        .main-image {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .main-image {
+            margin-bottom: 15px;
+        }
+
+        h2,
+        h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+        }
+
+        p {
+            font-size: 15px;
+            color: #666;
+            padding: 10px;
+
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        ul li {
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .second-section {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .second-column {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .second-image {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .section-border {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border: none;
+            border-top: 2px solid #807c7c;
+           
+        }
+
+        .bbc-caption {
+            font-size: 16px;
+            color: #000;
+          
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .third-section {
+            margin-top: 40px;
+        }
+
+        .third-section h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .third-section .news-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+
+        .third-section .news-item {
+            width: 20%;
+        }
+
+        .third-section .news-item h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .third-section .news-item p {
+            font-size: 14px;
+            color: #666;
+        }
+
+
+        body {
+    font-family: Arial, sans-serif;
+   
+    background-color: #f4f4f4;
+}
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+}
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+.news-container {
+    padding: 20px;
+    display: flex;
+   justify-content: center;
+    gap: 20px;
+   
+}
+.news-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+.news-card:hover {
+    transform: translateY(-5px);
+}
+.news-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+.news-content {
+    padding: 15px;
+}
+.news-title {
+    font-size: 18px;
+    margin: 0 0 10px;
+    color: #333;
+}
+.news-description {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+.read-more {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #007bff;
+    font-size: 14px;
+}
+.read-more:hover {
+    text-decoration: underline;
+}
+.head{
+    margin: 12px;
+    background: radial-gradient(rgb(234, 145, 145), transparent);
+}
+.line{
+/* background-color: black; */
+    width: 100%;
+    border: 1px solid black;
+    
+}
+.content_first{
+    display: grid;
+    grid-template-columns:1fr 2fr 1fr;
+    margin: 35px;
+
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+
+
+/* header */
+#header{
+            position: sticky;
+            top: -1px;
+            z-index: 1;
+            background-color: white;
+        }
+        #upper{
+            border: 1px solid rgb(230, 227, 227);
+            height: 60px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo{
+            background-color: black;
+            height:36px;
+            display: flex;
+            width: 37px;
+            font-size: 25px;
+            font-family: sans-serif;
+            font-weight:bold;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 2px;
+        }
+        .logo p{
+            color: aliceblue;
+           
+            font-size: 22px;
+        }
+        #logo{
+            display: flex;
+            justify-content: center;
+        }
+        #left {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+        #left a{
+            padding: 20px;
+            font-size: larger;
+            color: black;
+        }
+        #right button{
+            border: 0cap;
+            height: 40px;
+            width: 100px;
+            font-family: "Arial",sans-serif;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        #reg{
+            background-color: black;
+            color: aliceblue;
+        }
+        #sign{
+            background-color: white;
+        }
+        #lower{
+            display: flex;
+            justify-content: center;
+            border: 1px solid rgb(216, 216, 216);
+            margin:0;
+    
+        }
+        #lower a{
+            text-decoration: none;
+            color: black;
+            font-family: sans-serif;
+            font-weight:bold;
+            padding: 0 7px;
+            margin: 10px 0;
+        }
+
+
+/* footer */
+
+.bbc-footer {
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.footer-language {
+    margin-bottom: 20px;
+}
+
+.language-btn {
+    background-color: #e0e0e0;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.footer-social {
+    margin-bottom: 20px;
+}
+
+.footer-social span {
+    margin-right: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.footer-social a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.footer-links {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #666;
+    text-decoration: none;
+    margin: 0 5px;
+    font-size: 12px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.bbc-footer p {
+    font-size: 12px;
+    color: #999;
+}	
+
+
+    </style>
+</head>
+
+<body>
+
+    <!-- header -->
+
+    <header id="header">
+        <div id="upper">
+            <div id="left">
+                <a id="hemburger" href="#"><i class="fa-solid fa-bars"></i></a>
+                <a id="search" href="#"><i class="fas fa-search"></i></a>
+                
+        </div>
+            <div id="logo">
+                <div class="logo"><p>C</p></div>
+                <div class="logo"><p>S</p></div>
+                <div class="logo"><p>M</p></div>
+            </div>
+            
+            <div id="right">
+                <a href="login.html"> <button id="reg">Register</button></a>
+               <a href="login.html"> <button id="sign"><span>Sign In</span></button></a>
+            </div>
+        </div>
+        <div id="lower">
+            <a href="finale.html">Home</a>
+            <a href="News.html">News</a>
+            <a href="#">Sport</a>
+            <a href="#">Business</a>
+            <a href="innovation.html">Innovation</a>
+            <a href="#">Culture</a>
+            <a href="#">Arts</a>
+            <a href="#">Travel</a>
+            <a href="#">Earth</a>
+            <a href="#">Video</a>
+            <a href="#">Live</a>
+        </div>
+    </header>
+    <!-- end header -->
+     
+    <div class="head">
+
+        <h1 style="color: rgb(178, 8, 8); font-size: 50px; display: inline;">NEWS</h1>
+        <div class="line"></div>
+    </div>
+<!-- section 1 -->
+    <div class="news-section">
+        <!-- First Column -->
+        <div class="column first-column">
+            <div class="news-item">
+
+                <p style="font-size: 30px; padding: 5px;"><img style="animation: blink 3s infinite;" src="live.svg"
+                        alt=""><span
+                        style="color: rgb(193, 33, 33); font-weight: 700; font-size: 38px; padding: 10px; ">LIVE</span>Timelapse shows winter solstice sunrise at Stonehenge</p>
+                <p>Crowds gathered at Stonehenge on Saturday morning to mark the annual winter solstice.</p>
+
+                <h3>Today will have the fewest daylight hours for people in the northern hemisphere</h3>
+                <p>Timelapse footage on Saturday morning shows as people gathered at Stonehenge, in Wiltshire to mark the annual winter solstice.
+
+                    The winter solstice is the 24-hour period with the fewest hours of daylight in the year. It's also known as the shortest day and longest night.</p>
+                <p>10 hrs ago | Europe</p>
+            </div>
+            <div class="news-item">
+                <img src="https://ichef.bbci.co.uk/news/480/cpsprodpb/f137/live/85ea21b0-b846-11ef-beab-ed597ab8399e.jpg.webp"
+                    alt="" class="news-image">
+                <h3>The Indian family that built a business empire in Hawaii from scratch</h3>
+                <p>From businesses to philanthropy, the Watumull family is inextricably linked with Hawaiian history.</p>
+                <p>2 hrs ago | World</p>
+            </div>
+        </div>
+
+        <!-- Middle Column -->
+        <div class="column middle-column">
+            <div class="main-news">
+                <img src="https://ichef.bbci.co.uk/news/800/cpsprodpb/52ba/live/597559f0-bf95-11ef-a0f2-fd81ae5962f4.jpg.webp"
+                    alt="Musk and Trump" class="main-image">
+                <h2>The sun will soon set on parts of the UK - and our live coverage</h2>
+                <ul>
+                    <li>Some people (like us in the London newsroom, a windowless basement) saw no sun at all - but I enjoyed watching the stream of people enjoying the day.</li>
+                   
+                </ul>
+            </div>
+
+            <div class="main-news">
+                <img src="	https://ichef.bbci.co.uk/news/800/cpsprodpb/4027/live/5adff460-bd4e-11ef-a164-7d6c07cbd92c.png.webp"
+                    alt="Musk and Trump" class="main-image">
+                <h2>Sega considering Netflix-like game subscription service</h2>
+                <ul>
+                    <li>It's another sign the industry is moving away from owning games - some fear that means gamers having to "shell out more.</li>
+                   
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Third Column -->
+        <div class="column third-column">
+            
+            
+            <div class="side-news">
+                <img src="https://ichef.bbci.co.uk/news/480/cpsprodpb/cf59/live/21049ea0-bf04-11ef-a2ca-e99d0c9a24e3.jpg.webp" width="300px" height="190px" alt="">
+                <h3>'We have to be more bold': Syria's musicians await future under new Islamist leaders</h3>
+                <p>A lively electronic music scene developed under the Assad regime. Now, it's unclear what comes next.</p>
+                <p>47 mins ago | CSM InDepth</p>
+            </div>
+            <div class="side-news">
+                <h3>Jogging memories: Why some Nigerians in London set up their own running club</h3>
+                <p>2 hrs ago | Asia</p>
+            </div>
+            <div class="side-news">
+                <h3>David Attenborough's 70 years in broadcasting</h3>
+                <p>1 hr ago | US & Canada</p>
+            </div>
+            <div class="side-news">
+                <h3>Inside the abandoned homes of Assad's ruthless enforcers</h3>
+                <p>2 hrs ago | Europe</p>
+            </div>
+
+          
+
+            </div>
+
+        </div>
+    </div>
+
+<!-- cards section 2 -->
+    <div class="news-container" style="background-color: rgb(237, 235, 235); border-radius: 30px;">
+        <div class="news-card">
+            <img src="https://ichef.bbci.co.uk/news/480/cpsprodpb/d8f6/live/d84cbb00-beb5-11ef-addc-4536c4252544.jpg.webp" alt="News Image">
+            <div class="news-content">
+                <h3 class="news-title">One woman's 56-year fight to free her innocent brother from death sentence</h3>
+                <p class="news-description">Hideko Hakamata spent decades fighting to save her brother: the world's longest-serving death row inmate.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+        <div class="news-card">
+            <img src="	https://ichef.bbci.co.uk/news/480/cpsprodpb/4fc6/live/ef57dec0-beeb-11ef-aff0-072ce821b6ab.jpg.webp" alt="News Image">
+            <div class="news-content">
+                <h3 class="news-title">The drug-trafficking Rio gangsters who see themselves as God's 'soldiers of crime'</h3>
+                <p class="news-description">Brazilian narco gangs say they are taking territory for Jesus, and are barring other faiths from the favelas</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+        <div class="news-card">
+            <img src="	https://ichef.bbci.co.uk/news/480/cpsprodpb/9cb2/live/06482fb0-beef-11ef-a0f2-fd81ae5962f4.jpg.webp" alt="News Image">
+            <div class="news-content">
+                <h3 class="news-title">How offer of free food led to deadly crush at Nigerian Christmas fair</h3>
+                <p class="news-description">Discarded everyday objects remain after people fled Wednesday's deadly crush in Ibadan in panic.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="third-section">
+        <h2>More news</h2>
+        <div class="news-row">
+            <div class="news-item">
+                <h3>Five unanswered questions from the Pelicot trial</h3>
+                <p>9 hrs ago | Europe</p>
+            </div>
+            <div class="news-item">
+                <h3>Can you remember these 2024 culture moments?</h3>
+                <p>10 hrs ago | Europe</p>
+            </div>
+            <div class="news-item">
+                <h3>Faced with turmoil, a defiant Trudeau hangs on - for now</h3>
+                <p>10 hrs ago | Europe</p>
+            </div>
+            <div class="news-item">
+                <h3>UK passes 'solar noon' and halfway point of shortest day of the year</h3>
+                <p>8 hrs ago | Middle East</p>
+            </div>
+            <div class="news-item">
+                <h3>US avoids government shutdown after bill passes</h3>
+                <p>11 hrs ago | London</p>
+            </div>
+        </div>
+    </div>
+
+    <hr class="section-border">
+
+<!-- second box  -->
+
+<!-- section 1 -->
+    <div class="news-section">
+        <!-- First Column -->
+        <div class="column first-column">
+            <div class="news-item">
+<p style="font-size: large; font-weight: 700; color: black; text-decoration: underline; ">Also in news</p>
+                <p style="font-size: 30px; padding: 5px;"><img style="animation: blink 3s infinite;" src="live.svg"
+                        alt=""><span
+                        style="color: rgb(193, 33, 33); font-weight: 700; font-size: 38px; padding: 10px; ">LIVE</span>Five killed in strike on Russia's Kursk after deadly missile attack on Kyiv</p>
+
+                
+                <p>A reported attack on a Russian town comes after Ukraine said Moscow had launched a new attack on Kyiv.</p>
+                <p>10 hrs ago | Europe</p>
+            </div>
+            <div class="news-item">
+                <h3>Ros Atkins On... Four reasons why the relationship between the UK and China is strained</h3>
+                <p>The BBC's Analysis Editor Ros Atkins looks at how relations between the UK and China became so strained.</p>
+                <p>2 hrs ago | World</p>
+
+                <img src="https://ichef.bbci.co.uk/news/480/cpsprodpb/a90c/live/fbcea5b0-beca-11ef-a0f2-fd81ae5962f4.jpg.webp"
+                    alt="" class="news-image">
+                <h3>Warriors, water and a white horse: Photos of the week</h3>
+                <p>A selection of news photographs from around the world.</p>
+                <p>2 hrs ago | World</p>
+            </div>
+        </div>
+
+        <!-- Middle Column -->
+        <div class="column middle-column">
+            <div class="main-news">
+                <img src="	https://ichef.bbci.co.uk/news/800/cpsprodpb/c099/live/894c2620-bf51-11ef-a0f2-fd81ae5962f4.jpg.webp"
+                    alt="fg" class="main-image">
+                <h2>Russia says five people have been killed in a Ukrainian strike in the western Kursk region.</h2>
+                <ul>
+                    <li>Ukrainian officials reported earlier that Moscow had launched a fresh missile attack on Kyiv, damaging a building hosting several embassies.</li>
+                   
+                </ul>
+            </div>
+
+            <div class="main-news">
+                <img src="https://ichef.bbci.co.uk/news/800/cpsprodpb/da89/live/89a72780-bf8a-11ef-a0f2-fd81ae5962f4.jpg.webp"
+                    alt="Musk and Trump" class="main-image">
+                <h2>Who is the suspect? What we know so far about Magdeburg market attack</h2>
+                <ul>
+                    <li>The attack killed five people, including a nine-year-old child, and left more than 200 injured.</li>
+                   
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Third Column -->
+        <div class="column third-column">
+            
+            
+            <div class="side-news">
+                <h3>Japanese city to name and shame people who break rubbish rules</h3>
+                <p>Fukushima plans to go through trash that is not properly sorted, and publicly identify offenders.</p>
+                <p>47 mins ago | CSM InDepth</p>
+            </div>
+            <div class="side-news">
+                <h3>
+                    Syria rebel leader dismisses controversy over photo with woman</h3>
+                <p>2 hrs ago | Asia</p>
+            </div>
+            <div class="side-news">
+                <h3>How offer of free food led to deadly crush at Nigerian Christmas fair</h3>
+                <p>1 hr ago | US & Canada</p>
+            </div>
+            <div class="side-news">
+                <img src="https://ichef.bbci.co.uk/news/480/cpsprodpb/7665/live/5ede8dd0-be41-11ef-bf10-af1fefdf4b71.jpg.webp" width="300px" height="190px" alt="">
+                <h3>Italy's deputy PM Salvini cleared in kidnap trial of migrants blocked at sea</h3>
+                <p>Matteo Salvini was accused of kidnap and dereliction of duty for refusing to let a rescue boat dock in 2019.</p>
+                <p>2 hrs ago | Europe</p>
+            </div>
+
+          
+
+            </div>
+
+        </div>
+    </div>
+    <hr class="section-border">
+
+    <!-- Section 2 -->
+    <div class="third-section">
+        <h2>Most read</h2>
+        <div class="news-row">
+            <div class="news-item">
+                <h3>Inside the abandoned homes of Assad's ruthless enforcers</h3>
+                <p>9 hrs ago | Europe</p>
+            </div>
+            <div class="news-item">
+                <h3>Can you remember these 2024 culture moments?</h3>
+                <p>10 hrs ago | Europe</p>
+            </div>
+            <div class="news-item">
+                <h3>
+                    Who is the suspect? What we know so far about Magdeburg market attack</h3>
+                <p>10 hrs ago | Europe</p>
+            </div>
+            <div class="news-item">
+                <h3>
+                    Five dead, more than 200 injured in car attack on German Christmas market</h3>
+                <p>8 hrs ago | Middle East</p>
+            </div>
+            <div class="news-item">
+                <h3>9
+                    Man detained in Dubai over Google review home for Christmas</h3>
+                <p>11 hrs ago | London</p>
+            </div>
+        </div>
+    </div>
+
+<!-- cards section 3 -->
+    <div class="news-container" style="background-color: rgb(60, 59, 59); border-radius: 30px;">
+        <div class="news-card">
+            <img src="https://ichef.bbci.co.uk/news/480/cpsprodpb/1fd4/live/bcd11c50-bf04-11ef-aff0-072ce821b6ab.jpg.webp" alt="News Image">
+            <div class="news-content">
+                <h3 class="news-title">Trump campaign adviser calls incoming UK ambassador to US a 'moron'</h3>
+                <p class="news-description">Lord Peter Mandelson will be the UK's next ambassador to the US, an appointment he describes as "a great honour"</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+        <div class="news-card">
+            <img src="https://ichef.bbci.co.uk/news/800/cpsprodpb/12e4/live/0d8b2090-bee3-11ef-9880-bd78436cd924.jpg.webp" alt="News Image">
+            <div class="news-content">
+                <h3 class="news-title">Starbucks baristas launch strike in US, union says</h3>
+                <p class="news-description">More than 11,000 Starbucks baristas in the US have begun a five-day strike in a dispute over pay and working conditions.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+        <div class="news-card">
+            <img src="https://ichef.bbci.co.uk/news/800/cpsprodpb/33a9/live/d1b22790-bf4f-11ef-aff0-072ce821b6ab.jpg.webp" alt="News Image">
+            <div class="news-content">
+                <h3 class="news-title">Google suggests fixes to its search monopoly</h3>
+                <p class="news-description">Google proposed new limits after a judge ruled Google illegally crushed competition in search.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+    </div>
+    
+
+    <hr class="section-border">
+
+    <footer class="bbc-footer">
+        <div class="footer-nav">
+            <a href="#">Home</a>
+            <a href="#">News</a>
+            <a href="#">Sport</a>
+            <a href="#">Business</a>
+            <a href="#">Innovation</a>
+            <a href="#">Culture</a>
+            <a href="#">Arts</a>
+            <a href="#">Travel</a>
+            <a href="#">Earth</a>
+            <a href="#">Video</a>
+            <a href="#">Live</a>
+            <a href="#">Audio</a>
+            <a href="#">Weather</a>
+            <a href="#">CSM Shop</a>
+        </div>
+        <div class="footer-language">
+            <button class="language-btn">CSM in other languages &#9662;</button>
+        </div>
+        <div class="footer-social">
+            <span>Follow CSM on:</span>
+            <a href="#"><i class="fa-solid fa-x"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            
+        </div>
+        <div class="footer-links">
+            <a href="#">Terms of Use</a> |
+            <a href="#">About the CSM</a> |
+            <a href="#">Privacy Policy</a> |
+            <a href="#">Cookies</a> |
+            <a href="#">Accessibility Help</a> |
+            <a href="#">Contact the BBC</a> |
+            <a href="#">Advertise with us</a> |
+            <a href="#">Do not share or sell my info</a> |
+            <a href="#">Contact technical support</a>
+        </div>
+        <p>&copy; 2024 CSM. All rights reserved. The CSM is not responsible for the content of external sites.
+            <a href="#">Read about our approach to external linking</a>.
+        </p>
+    </footer>
+
+</body>
+
+</html>

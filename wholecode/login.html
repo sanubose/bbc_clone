@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registration Page</title>
+  <style>
+ 
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .form{
+      display: grid; 
+      grid-template-columns: 20fr 1fr;
+    }
+    .container {
+     width: fit-content;
+     margin: auto;
+      padding: 60px;
+      text-align: center;
+      background-color: #111;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+    }
+    .logo {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #1F80E0;
+    }
+    h2 {
+      margin: 10px 0 20px 0;
+      font-size: 22px;
+    }
+    p {
+      margin: 10px 0;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    form {
+      margin: 20px 0;
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 14px;
+      text-align: left;
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    button {
+      width: 100%;
+     
+      padding: 12px;
+      background-color: #1F80E0;
+      border: none;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #0056B3;
+    }
+    a {
+      color: #1F80E0;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    /* Responsive Design */
+    @media (max-width: 500px) {
+      .container {
+        padding: 20px;
+      }
+      .logo {
+        font-size: 28px;
+      }
+      h2 {
+        font-size: 20px;
+      }
+      input, button {
+        font-size: 14px;
+        padding: 10px;
+      }
+    }
+   
+    .logo{
+      /* background-color: black; */
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+
+
+      
+      
+    }
+    .logo > div{
+      
+background-color: white;
+color: black;
+font-weight: bolder;
+padding: 0px 5px 0px 5px;
+margin: 5px;
+
+    }
+  </style>
+</head>
+<body>
+    <div class="form">
+
+        <div class="container">
+            <div class="logo">
+              <div>C</div>
+              <div>S</div>
+              <div>M</div>
+            </div>
+    <h2>Register for a CSM Account</h2>
+    <p>You must be 18 or over to register for a CSM account.</p>
+    <form>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      <button type="submit">Continue</button>
+    </form>
+    <p>Already have a CSM account? <a href="#">Sign in now</a></p>
+  </div>
+
+  <div >
+    <!-- <img style="  transform: rotate(317deg);  border-radius: 22px;" src="	https://ichef.bbci.co.uk/news/1536/cpsprodpb/bb19/live/0e46dfd0-be7d-11ef-9089-8d7cb397538e.jpg.webp" width="250px" height="200px" alt="">
+    <img style="  transform: rotate(338deg);  border-radius: 22px;"  src="https://ichef.bbci.co.uk/news/800/cpsprodpb/4f11/live/62fc6950-bed7-11ef-aff0-072ce821b6ab.jpg.webp" width="350px" height="200px" alt="">
+    <img style=" transform: rotate(340deg);  border-radius: 22px;"  src="https://ichef.bbci.co.uk/news/480/cpsprodpb/6369/live/312082c0-be75-11ef-a4b0-83a93ef47ff9.jpg.webp" width="250px" height="200px" alt="">
+    <img style=" transform: rotate(22deg);  border-radius: 22px;"  src="https://ichef.bbci.co.uk/news/480/cpsprodpb/e3f5/live/02c4dcf0-be4d-11ef-a2ca-e99d0c9a24e3.jpg.webp" width="350px" height="200px" alt=""> -->
+    <img src="	https://ichef.bbci.co.uk/images/ic/raw/p0k21mq7.jpg.webp" width="600px" height="600px" alt="">
+</div>
+</div>
+</body>
+</html>
