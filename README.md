@@ -29,7 +29,7 @@ Attach a very short video walkthough of codebase [ 1 - 5 minutes ]
 List out the key features of your application.
 
 - Cover global News of World
-- Easy and User friendly Interface
+- Easy and User-friendly Interface
 - SignUp With Email
 
 ## design decisions or assumptions
@@ -50,7 +50,7 @@ npm start
 
 
 ## Usage
-this website Cover of gobal use of world 
+this website Covers global use of the world 
 
 
 bash
@@ -60,11 +60,11 @@ bash
 Include screenshots as necessary.
 
 ## Credentials
-Provide user credentials for autheticated pages
+Provide user credentials for authenticated pages
 
-## Contribule
+## Contribute
 
-SANU BOSE- Merge Whole code , make clean code De- bugging code making Innovation Webpage.
-MOHIT SHRMA- Making Header and footer , De bugging Code and Funaction of Website.
-HARSHIT SHES- Making Home Page , News page , Working on function of Website.
-MOHAMMED NAWAZ - Making Section of Home Page , Live page , Working on function of Website.
+SANU BOSE- Merge Whole code, make clean code, and Debug code making Innovation Webpage.
+MOHIT SHARMA- Making Header and footer, Debugging Code and Function of Website.
+HARSHIT SHES- Making a Home Page and news page , Working on the Website's function.
+MOHAMMED NAWAZ - Making Section of Home Page, Live page, Working on function of Website.
